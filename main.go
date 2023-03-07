@@ -24,12 +24,32 @@ func TotalEvenNumbers(numbers []string) int {
 	return sum
 }
 
+//Develop a program that takes in a string as input and returns the number of vowels in the string.
+
+func CountVowels(name string) int {
+	count := 0
+	for _, i := range name {
+		switch i {
+		case 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U':
+			count++
+		}
+	}
+
+	return count
+}
+
 func main() {
-	fmt.Println("Hello World!")
+	var name string
+	fmt.Println("Question 1")
 	// Question 1
 	numbers := []string{"1", "bananana", "3", "four", "5", "22", "2"}
-
 	Sum := TotalEvenNumbers(numbers)
 	fmt.Println(Sum)
+
+	// Question 2
+	fmt.Println("Question 2")
+	fmt.Print("Enter your name: ")
+	fmt.Scanln(&name)
+	fmt.Printf("The number of vowels in '%s' is %d\n", name, CountVowels(name))
 
 }
