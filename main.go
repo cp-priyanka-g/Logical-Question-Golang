@@ -38,28 +38,6 @@ func CountVowels(name string) int {
 	return count
 }
 
-// Question 4: Develop a program that takes in a list of integers as input and returns the largest integer in the list.
-func LargestIntegerNumber() float64 {
-	var num [50]float64
-	var total int
-	fmt.Print("Enter number of elements: ")
-	fmt.Scanln(&total)
-	if total == 0 {
-		panic("Size cannot be zero")
-	}
-	for i := 0; i < total; i++ {
-		fmt.Print("Enter the number : ")
-		fmt.Scan(&num[i])
-	}
-	for j := 1; j < total; j++ {
-		if num[0] < num[j] {
-			num[0] = num[j]
-		}
-
-	}
-	return num[0]
-}
-
 //Question 3: Develop a program that takes in a list of strings as input and returns the shortest string in the list.
 func ShortestStringOfSlice() string {
 	size := 0
@@ -87,6 +65,56 @@ func ShortestStringOfSlice() string {
 	return elements[index]
 }
 
+// Question 4: Develop a program that takes in a list of integers as input and returns the largest integer in the list.
+func LargestIntegerNumber() float64 {
+	var num [50]float64
+	var total int
+	fmt.Print("Enter number of elements: ")
+	fmt.Scanln(&total)
+	if total == 0 {
+		panic("Size cannot be zero")
+	}
+	for i := 0; i < total; i++ {
+		fmt.Print("Enter the number : ")
+		fmt.Scan(&num[i])
+	}
+	for j := 1; j < total; j++ {
+		if num[0] < num[j] {
+			num[0] = num[j]
+		}
+
+	}
+	return num[0]
+}
+
+// Question 5 : Develop a program that takes in a list of strings as input and returns the number of unique strings in the list.
+
+func UniqueStringOfSlice() int {
+	size := 0
+	count := 0
+	fmt.Print("Number of elements n=")
+	fmt.Scanln(&size)
+	fmt.Println("Enter  elements")
+	elements := make([]string, size)
+	for i := 0; i < size; i++ {
+
+		fmt.Scanln(&elements[i])
+	}
+	if size == 0 {
+		panic("Size cannot be zero")
+	}
+
+	PreviousElement := elements[0]
+	for i := 1; i < len(elements); i++ {
+		if elements[i] != PreviousElement {
+			count++
+			PreviousElement = elements[i]
+		}
+
+	}
+	return count
+}
+
 func main() {
 	// var name string
 	// fmt.Println("Question 1")
@@ -102,7 +130,10 @@ func main() {
 	//fmt.Printf("The number of vowels in '%s' is %d\n", name, CountVowels(name))
 
 	// Question 3
-	fmt.Print("Shortest String in slice  : ", ShortestStringOfSlice())
+	//fmt.Print("Shortest String in slice  : ", ShortestStringOfSlice())
 	//Question 4
 	//fmt.Print("The largest number is : ", LargestIntegerNumber())
+	//Question 5
+	fmt.Print("The Number of Unique String is : ", UniqueStringOfSlice())
+
 }
