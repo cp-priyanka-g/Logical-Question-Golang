@@ -44,12 +44,15 @@ func LargestIntegerNumber() float64 {
 	var total int
 	fmt.Print("Enter number of elements: ")
 	fmt.Scanln(&total)
+	if total == 0 {
+		panic("Size cannot be zero")
+	}
 	for i := 0; i < total; i++ {
 		fmt.Print("Enter the number : ")
 		fmt.Scan(&num[i])
 	}
 	for j := 1; j < total; j++ {
-		if num[0] > num[j] {
+		if num[0] < num[j] {
 			num[0] = num[j]
 		}
 
@@ -65,9 +68,12 @@ func ShortestStringOfSlice() string {
 	fmt.Println("Enter  elements")
 	elements := make([]string, size)
 	for i := 0; i < size; i++ {
+
 		fmt.Scanln(&elements[i])
 	}
-	fmt.Println("Entered Array of elements:", elements)
+	if size == 0 {
+		panic("Size cannot be zero")
+	}
 
 	smallestElement := len(elements[0])
 	index := 0
@@ -98,6 +104,5 @@ func main() {
 	// Question 3
 	fmt.Print("Shortest String in slice  : ", ShortestStringOfSlice())
 	//Question 4
-
 	//fmt.Print("The largest number is : ", LargestIntegerNumber())
 }
