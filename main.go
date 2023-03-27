@@ -127,6 +127,6 @@ func main() {
 	//fmt.Println("Even Numbers:", EvenIntegersSlice())
 	//fmt.Println("Second largest Integer", SecondLargestInteger())
 	//fmt.Println("String with Vowels", VowelStringList())
-	fmt.Println("String with Vowels", IsSumIntegerDivisible())
+	fmt.Println("Sum of integer Divisible by 5 and 3:", IsSumIntegerDivisible())
 
 }
