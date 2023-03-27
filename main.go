@@ -71,7 +71,6 @@ func VowelStringList() []string {
 
 	for {
 		input, _ := reader.ReadString('\n')
-
 		if input == "\n" {
 			break
 		}
@@ -97,13 +96,13 @@ func VowelStringList() []string {
 	return vowelStringsList
 
 }
-
 func main() {
 	//var Name string
 	// fmt.Println("Enter String")
 	// fmt.Scanln(&Name)
 	// fmt.Println("Is it palindrome string", isPalindrome(Name))
 	//fmt.Println("Even Numbers:", EvenIntegersSlice())
+	//fmt.Println("Second largest Integer", SecondLargestInteger())
 	fmt.Println("String with Vowels", VowelStringList())
 
 }
