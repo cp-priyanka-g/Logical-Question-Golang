@@ -96,6 +96,29 @@ func VowelStringList() []string {
 	return vowelStringsList
 
 }
+
+//Question 10: Develop a program that takes in a list of integers as input and returns the sum of all integers in the list that are divisible by 3 or 5
+func IsSumIntegerDivisible() int {
+	var size int
+
+	fmt.Print("Enter number of elements: ")
+	fmt.Scanln(&size)
+	num := make([]int, size)
+
+	for i := 0; i < size; i++ {
+		fmt.Print("Enter the number : ")
+		fmt.Scan(&num[i])
+	}
+	sum := 0
+
+	for _, num := range num {
+		if num%3 == 0 || num%5 == 0 {
+			sum += num
+		}
+	}
+
+	return sum
+}
 func main() {
 	//var Name string
 	// fmt.Println("Enter String")
@@ -103,6 +126,7 @@ func main() {
 	// fmt.Println("Is it palindrome string", isPalindrome(Name))
 	//fmt.Println("Even Numbers:", EvenIntegersSlice())
 	//fmt.Println("Second largest Integer", SecondLargestInteger())
-	fmt.Println("String with Vowels", VowelStringList())
+	//fmt.Println("String with Vowels", VowelStringList())
+	fmt.Println("String with Vowels", IsSumIntegerDivisible())
 
 }
