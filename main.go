@@ -67,12 +67,12 @@ func VowelStringList() []string {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter strings (one per line, press Enter to stop): ")
 
-	stringsList := make([]string, 0) // Create empty slice
+	stringsList := make([]string, 0)
 
 	for {
-		input, _ := reader.ReadString('\n') // Read input from user
+		input, _ := reader.ReadString('\n')
 
-		if input == "\n" { // Stop loop if user presses Enter
+		if input == "\n" {
 			break
 		}
 		stringsList = append(stringsList, strings.TrimSpace(input))
