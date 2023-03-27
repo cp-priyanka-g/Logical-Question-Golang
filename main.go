@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"sort"
+	"strings"
 )
 
 //Question 6:Develop a program that takes in a string as input and returns True if the string is a palindrome and False otherwise
@@ -57,12 +60,50 @@ func SecondLargestInteger() int {
 	return intSlice[1]
 }
 
+// Question 9: Develop a program that takes in a list of strings as input and returns a new list containing only the strings that start with a vowel
+func VowelStringList() []string {
+	//stringsList := []string{"Priya", "Manish", "Aryan", "Anvi", "eklavya", "urvashi"}
+
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter strings (one per line, press Enter to stop): ")
+
+	stringsList := make([]string, 0) // Create empty slice
+
+	for {
+		input, _ := reader.ReadString('\n') // Read input from user
+
+		if input == "\n" { // Stop loop if user presses Enter
+			break
+		}
+		stringsList = append(stringsList, strings.TrimSpace(input))
+	}
+	vowelStringsList := []string{}
+
+	for _, str := range stringsList {
+		if strings.HasPrefix(str, "a") ||
+			strings.HasPrefix(str, "e") ||
+			strings.HasPrefix(str, "i") ||
+			strings.HasPrefix(str, "o") ||
+			strings.HasPrefix(str, "u") ||
+			strings.HasPrefix(str, "A") ||
+			strings.HasPrefix(str, "E") ||
+			strings.HasPrefix(str, "I") ||
+			strings.HasPrefix(str, "O") ||
+			strings.HasPrefix(str, "U") {
+			vowelStringsList = append(vowelStringsList, str)
+		}
+	}
+
+	return vowelStringsList
+
+}
+
 func main() {
 	//var Name string
 	// fmt.Println("Enter String")
 	// fmt.Scanln(&Name)
 	// fmt.Println("Is it palindrome string", isPalindrome(Name))
 	//fmt.Println("Even Numbers:", EvenIntegersSlice())
-	fmt.Println("Second largest Integer", SecondLargestInteger())
+	fmt.Println("String with Vowels", VowelStringList())
 
 }
