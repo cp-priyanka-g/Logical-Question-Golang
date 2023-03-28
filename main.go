@@ -232,32 +232,37 @@ func IsSumIntegerDivisible() int {
 }
 
 func main() {
-	// var name string
-	// fmt.Println("Question 1")
-	// // Question 1
-	// numbers := []string{"1", "bananana", "3", "four", "5", "22", "2"}
-	// Sum := TotalEvenNumbers(numbers)
-	// fmt.Println(Sum)
+	var name string
+	fmt.Println("Question 1")
+	// Question 1
+	numbers := []string{"1", "bananana", "3", "four", "5", "22", "2"}
+	Sum := TotalEvenNumbers(numbers)
+	fmt.Println(Sum)
 
-	// // Question 2
-	// fmt.Println("Question 2")
-	// fmt.Print("Enter your name: ")
-	// fmt.Scanln(&name)
-	//fmt.Printf("The number of vowels in '%s' is %d\n", name, CountVowels(name))
+	// Question 2
+	fmt.Println("Question 2")
+	fmt.Print("Enter your name: ")
+	fmt.Scanln(&name)
+	fmt.Printf("The number of vowels in '%s' is %d\n", name, CountVowels(name))
 
 	// Question 3
-	//fmt.Print("Shortest String in slice  : ", ShortestStringOfSlice())
+	fmt.Print("Shortest String in slice  : ", ShortestStringOfSlice())
 	//Question 4
-	//fmt.Print("The largest number is : ", LargestIntegerNumber())
+	fmt.Print("The largest number is : ", LargestIntegerNumber())
 	//Question 5
 	fmt.Print("The Number of Unique String is : ", UniqueStringOfSlice())
-	//var Name string
-	// fmt.Println("Enter String")
-	// fmt.Scanln(&Name)
-	// fmt.Println("Is it palindrome string", isPalindrome(Name))
-	//fmt.Println("Even Numbers:", EvenIntegersSlice())
-	//fmt.Println("Second largest Integer", SecondLargestInteger())
-	//fmt.Println("String with Vowels", VowelStringList())
+	//Question 6
+	var Name string
+	fmt.Println("Enter String")
+	fmt.Scanln(&Name)
+	fmt.Println("Is it palindrome string", isPalindrome(Name))
+	//Question 7
+	fmt.Println("Even Numbers:", EvenIntegersSlice())
+	//Question 8
+	fmt.Println("Second largest Integer", SecondLargestInteger())
+	//Question 9
+	fmt.Println("String with Vowels", VowelStringList())
+	//Question 10
 	fmt.Println("Sum of integer Divisible by 5 and 3:", IsSumIntegerDivisible())
 
 }
