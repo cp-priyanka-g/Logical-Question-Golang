@@ -1,3 +1,3 @@
-module Logical-Question-Golang
+module main.go
 
 go 1.18
