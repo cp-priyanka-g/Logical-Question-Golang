@@ -231,6 +231,20 @@ func IsSumIntegerDivisible() int {
 	return sum
 }
 
+// Question 11: program to reverse string
+func ReverseString() string {
+	var Name string
+	fmt.Println("Enter String")
+	fmt.Scanln(&Name)
+
+	var result string
+
+	for _, v := range Name {
+		result = string(v) + result
+	}
+	fmt.Println("Your String", Name)
+	return result
+}
 func main() {
 	var name string
 	fmt.Println("Question 1")
@@ -264,5 +278,7 @@ func main() {
 	fmt.Println("String with Vowels", VowelStringList())
 	//Question 10
 	fmt.Println("Sum of integer Divisible by 5 and 3:", IsSumIntegerDivisible())
+	//Question 11
+	fmt.Println("Reverse String:", ReverseString())
 
 }
