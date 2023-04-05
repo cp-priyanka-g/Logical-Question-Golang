@@ -50,13 +50,11 @@ func ShortestStringOfSlice() string {
 	fmt.Println("Enter  elements")
 	elements := make([]string, size)
 	for i := 0; i < size; i++ {
-
 		fmt.Scanln(&elements[i])
 	}
 	if size == 0 {
 		panic("Size cannot be zero")
 	}
-
 	smallestElement := len(elements[0])
 	index := 0
 	for i := 1; i < len(elements); i++ {
